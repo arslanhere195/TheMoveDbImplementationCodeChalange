@@ -81,7 +81,7 @@ class MoviesListFragment : Fragment(), MoviesAdapter.Interaction {
             layoutManager = GridLayoutManager(this@MoviesListFragment.context, 2)
 
             recyclerAdapter = MoviesAdapter(
-                 this@MoviesListFragment
+                this@MoviesListFragment
             )
 
             adapter = recyclerAdapter
@@ -90,7 +90,7 @@ class MoviesListFragment : Fragment(), MoviesAdapter.Interaction {
     }
 
     private fun subscribeObserver() {
-
+        movielist.clear()
         progressDialog.setLabel("Please Wait")
         progressDialog.show()
         viewModel.getMoviesData().observe(viewLifecycleOwner, {
