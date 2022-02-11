@@ -1,16 +1,11 @@
 package com.dev.androidcodechallange.api
 
-import android.app.Application
-
-
-import okhttp3.OkHttpClient
+ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 
-class RetrofitBuilder(
-    private val application: Application,
-) {
+class RetrofitBuilder {
 
 
     companion object {
