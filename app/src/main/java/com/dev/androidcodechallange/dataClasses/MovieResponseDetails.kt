@@ -4,6 +4,7 @@ import android.util.Log
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
+import com.dev.androidcodechallange.utils.Constants
 
 data class MovieResponseDetails(
     val backdrop_path: String, val original_title: String, val overview: String,
@@ -20,7 +21,7 @@ data class MovieResponseDetails(
 
             if (!backdrop_path.isNullOrEmpty()) {
 
-                Log.d("check",backdrop_path)
+                Log.d("check", backdrop_path)
                 Glide.with(view.context).load(Constants.BASE_IMAGE_URL.plus(backdrop_path))
                     .into(view)
             }
